@@ -30,3 +30,12 @@ void showMenu()
     std::cout << "3. Keluar" << std::endl;
     std::cout << "Pilih opsi: ";
 }
+
+void biodataKelompok()
+{
+    system("cls");
+    std::cout << "\n=== Biodata Kelompok ===" << std::endl;
+    std::cout << "Nama Kelompok: Kelompok 3" << std::endl;
+    std::cout << "Anggota: \n1. Laila Hayati\n2. Asyaika Zahrah\n3. Trindah Agustina \n4. Siti Amaliya" << std::endl;
+    getch();
+}
