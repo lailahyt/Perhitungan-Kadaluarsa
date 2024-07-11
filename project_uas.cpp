@@ -20,3 +20,13 @@ void intro()
     std::cout << "Tekan Enter untuk melanjutkan..." << std::endl;
     std::cin.get();
 }
+
+void showMenu()
+{
+    system("cls");
+    std::cout << "\n=== Menu ===" << std::endl;
+    std::cout << "1. Biodata Kelompok" << std::endl;
+    std::cout << "2. Menghitung Kadaluarsa" << std::endl;
+    std::cout << "3. Keluar" << std::endl;
+    std::cout << "Pilih opsi: ";
+}
