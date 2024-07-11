@@ -81,3 +81,33 @@ void menghitungKadaluarsa()
     }
     getch();
 }
+
+int main()
+{
+    int pilihan;
+    intro();
+
+    do
+    {
+        showMenu();
+        std::cin >> pilihan;
+
+        switch (pilihan)
+        {
+        case 1:
+            biodataKelompok();
+            break;
+        case 2:
+            menghitungKadaluarsa();
+            break;
+        case 3:
+            std::cout << "Keluar dari program..." << std::endl;
+            break;
+        default:
+            std::cout << "Pilihan tidak valid, coba lagi." << std::endl;
+            getch();
+        }
+    } while (pilihan != 3);
+
+    return 0;
+}
