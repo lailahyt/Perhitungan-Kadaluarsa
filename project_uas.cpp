@@ -49,3 +49,19 @@ int hitungSelisihHari(int tgl1, int bln1, int thn1, int tgl2, int bln2, int thn2
     double difference = std::difftime(time_kadaluarsa, time_beli) / (60 * 60 * 24);
     return static_cast<int>(difference);
 }
+
+void menghitungKadaluarsa()
+{
+    system("cls");
+    Produk produk;
+
+    std::cout << "\n=== Menghitung Kadaluarsa ===" << std::endl;
+    std::cin.ignore(); // Mengkonsumsi karakter newline yang tertinggal di buffer
+    std::cout << "Apa Nama Produk Anda \t: ";
+    std::getline(std::cin, produk.nama_produk);
+
+    std::cout << "Kapan Anda Membeli " << produk.nama_produk << " (dd mm yyyy)\t: ";
+    std::cin >> produk.tanggal_beli >> produk.bulan_beli >> produk.tahun_beli;
+
+    std::cout << "Kapan Tanggal Kadaluarsa Produk " << produk.nama_produk << " (dd mm yyyy)\t: ";
+    std::cin >> produk.tanggal_kadaluarsa >> produk.bulan_kadaluarsa >> produk.tahun_kadaluarsa;
