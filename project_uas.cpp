@@ -39,3 +39,13 @@ void biodataKelompok()
     std::cout << "Anggota: \n1. Laila Hayati\n2. Asyaika Zahrah\n3. Trindah Agustina \n4. Siti Amaliya" << std::endl;
     getch();
 }
+
+int hitungSelisihHari(int tgl1, int bln1, int thn1, int tgl2, int bln2, int thn2)
+{
+    std::tm tm_beli = {0, 0, 0, tgl1, bln1 - 1, thn1 - 1900};
+    std::tm tm_kadaluarsa = {0, 0, 0, tgl2, bln2 - 1, thn2 - 1900};
+    std::time_t time_beli = std::mktime(&tm_beli);
+    std::time_t time_kadaluarsa = std::mktime(&tm_kadaluarsa);
+    double difference = std::difftime(time_kadaluarsa, time_beli) / (60 * 60 * 24);
+    return static_cast<int>(difference);
+}
