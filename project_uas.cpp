@@ -65,3 +65,19 @@ void menghitungKadaluarsa()
 
     std::cout << "Kapan Tanggal Kadaluarsa Produk " << produk.nama_produk << " (dd mm yyyy)\t: ";
     std::cin >> produk.tanggal_kadaluarsa >> produk.bulan_kadaluarsa >> produk.tahun_kadaluarsa;
+
+    int sisa_hari = hitungSelisihHari(produk.tanggal_beli, produk.bulan_beli, produk.tahun_beli, produk.tanggal_kadaluarsa, produk.bulan_kadaluarsa, produk.tahun_kadaluarsa);
+
+    std::cout << "\n=== Hasil Perhitungan ===" << std::endl;
+    std::cout << "Produk\t\t: " << produk.nama_produk << std::endl;
+    std::cout << "Sisa Hari\t: " << sisa_hari << " hari" << std::endl;
+    if (sisa_hari > 0)
+    {
+        std::cout << "Status\t\t: Aman" << std::endl;
+    }
+    else
+    {
+        std::cout << "Status\t\t: Tidak Aman" << std::endl;
+    }
+    getch();
+}
